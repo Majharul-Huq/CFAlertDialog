@@ -5,6 +5,7 @@ import android.animation.ValueAnimator;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
@@ -176,6 +177,13 @@ public class CFAlertDialog extends AppCompatDialog {
         buttonContainerLinearLayout = dialogCardView.findViewById(R.id.alert_buttons_container);
         cfDialogFooterLinearLayout = dialogCardView.findViewById(R.id.alert_footer_container);
         selectableItemsContainer = dialogCardView.findViewById(R.id.alert_selection_items_container);
+
+        // Custom Fonts
+        Typeface face = Typeface.createFromAsset(getContext().getAssets(),"fonts/MONTSERRAT-REGULAR.OTF");
+        dialogTitleTextView.setTypeface(face);
+        face = Typeface.createFromAsset(getContext().getAssets(),"fonts/MONTSERRAT-LIGHT.OTF");
+        dialogMessageTextView.setTypeface(face);
+
     }
 
     private void populateCardView() {

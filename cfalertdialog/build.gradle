@@ -30,7 +30,7 @@ android {
     buildToolsVersion '28.0.3'
 
     defaultConfig {
-        minSdkVersion 14
+        minSdkVersion 16
         targetSdkVersion 28
         versionCode libraryVersionCode
         versionName libraryVersion
@@ -58,7 +58,7 @@ dependencies {
 
 // Local properties
 Properties properties = new Properties()
-properties.load(project.rootProject.file('bintray.properties').newDataInputStream())
+//properties.load(project.rootProject.file('bintray.properties').newDataInputStream())
 
 group = libraryGroup
 version = libraryVersion

@@ -34,7 +34,9 @@ public class CFPushButton extends AppCompatButton {
         setGravity(Gravity.CENTER);
         ViewUtil.addBounceEffect(this);
 
-        setTypeface(getTypeface(), Typeface.BOLD);
+        Typeface tf = Typeface.createFromAsset(context
+                .getAssets(), "fonts/" + "MONTSERRAT-BOLD.OTF");
+        setTypeface(tf);
     }
 
 }
